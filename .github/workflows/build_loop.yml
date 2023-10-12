@@ -29,6 +29,22 @@ jobs:
         with:
           submodules: recursive
 
+      # Customize Loop: Download and apply patches
+      - name: Customize Loop
+        run: |
+
+          # For each patch, edit comment line (keep the #) then update curl (and remove the #)
+
+          # Submodule Loop patches: 
+          # Loop: Filename: quick carbs from 30mins to 1hr
+          # https://github.com/bmcd31/Loop https://github.com/bmcd31//Loop/blob/dev/LoopCore/LoopCoreConstants/commit/a46a57c0e4aee6ec9ddba238ed0cd4c9b4ddbe7f.patch | git apply -v --directory=Loop
+
+          # Submodule LoopKit patches:
+          # LoopKit: Filename: customization details
+          #curl https://github.com/username/LoopKit/commit/SHA-1.patch | git apply -v --directory=LoopKit
+
+          # Submodule xxxxx patches: Follow prototype above
+
 # Customize Loop: Download and apply patches
       - name: Customize Loop
         run: | 
