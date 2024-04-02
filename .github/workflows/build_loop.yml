@@ -58,8 +58,8 @@ jobs:
 
           # Submodule Loop patches:
           # Loop: Filename: customization details
-          #curl https://github.com/bmcd31/Loop/commit/63a1d780e44f697b8a51541fd247bc2c03e7b478.patch | git apply -v --directory=Loop
-
+          #curl https://github.com/bmcd31/Loop/commit/af84670dbb03a9f713407c8fceb2d2903bb3c5f1.patch | git apply -v --directory=Loop
+          
           # Submodule LoopKit patches:
           # LoopKit: Filename: customization details
           #curl https://github.com/username/LoopKit/commit/SHA-1.patch | git apply -v --directory=LoopKit
