@@ -241,37 +241,20 @@ jobs:
           
           # Submodule xxxxx patches:
 
-          # Customize Loop: Download and apply patches
-      - name: Customize Loop
-        run: | 
-          # The lines below add the customizations listed using the CustomizationSelect script
-          # The "\" is a continuation character 
-          #   the line following a "\" cannot be blank - that causes the Action to never complete
-          /bin/bash -c "$(curl -fsSL \
-          https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
-          dexcom_sage \
-          dexcom_upload_readings \
-          high_carb_limit \
-          override_sens \
-          limit_loop_cycle_time \
-          customtypeone_looppatches \
-          2002 \
-          algorithm_experiments \
-          testflight_expiration_warning
-          # the final customization listed above CANNOT have a continuation character "\"
-          # more customizations can be pasted after this line
-               # Customize Loop: Download and apply patches
+                # Customize Loop: Download and apply patches
       - name: Customize Loop
         run: |
+
           # For each patch, edit comment line (keep the #) then update curl (and remove the #)
+
           # Submodule Loop patches:
           # Loop: Filename: customization details
           curl https://github.com/bmcd31/Loop/commit/af84670dbb03a9f713407c8fceb2d2903bb3c5f1.patch | git apply -v --directory=Loop
-          
+
           # Submodule LoopKit patches:
           # LoopKit: Filename: customization details
-          #curl https://github.com/username/LoopKit/commit/SHA-1.patch | git apply -v --directory=LoopKit
-          
+           #curl https://github.com/username/LoopKit/commit/SHA-1.patch | git apply -v --directory=LoopKit
+
           # Submodule xxxxx patches: Follow prototype above
 
           # Add patches for customization of additional submodules by following the templates above, 
