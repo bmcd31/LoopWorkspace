@@ -270,6 +270,10 @@ jobs:
           # LoopKit: Filename: customization details
            #curl https://github.com/username/LoopKit/commit/SHA-1.patch | git apply -v --directory=LoopKit
 
+          # Submodule Loop patches:
+          # Loop: Filename: customization details
+          curl https://github.com/bmcd31/Loop/commit/663bcb0b5abd3e19049f6ab102622557938d346d.patch | git apply -v --directory=Loop
+
           # Submodule xxxxx patches: Follow prototype above
 
           # Add patches for customization of additional submodules by following the templates above, 
