@@ -216,8 +216,7 @@ jobs:
           override_sens \
           now_line \
           meal_week \
-          2002 \
-          live_activity
+          2002
 
           # the final customization listed above CANNOT have a continuation character "\"
           # more customizations can be pasted after this line
